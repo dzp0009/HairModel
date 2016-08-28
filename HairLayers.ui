@@ -1,0 +1,4512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HairLayersClass</class>
+ <widget class="QMainWindow" name="HairLayersClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1117</width>
+    <height>781</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>HairLayers</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background: #888888;
+	color: #000;
+	font: 10pt &quot;Segoe UI&quot;;
+}
+
+QLabel {
+	background: transparent;
+}
+
+QRadioButton {
+  	background: transparent;
+}
+
+QPushButton {
+	padding: 2px 6px;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #CCCCCC, stop: 1 #AAAAAA);
+	border: 1px solid #444444;
+}
+
+QPushButton:hover {
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDDD, stop: 1 #BBBBBB);
+	border: 1px solid #3399FF;
+}
+
+QPushButton:pressed {
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #707070, stop: 1 #909090);
+	color: #DDDDDD;
+}
+
+QPushButton:disabled {
+	color: #808080;
+	background: #BBBBBB;
+	border: 1px solid #555555;
+}
+
+QLineEdit, QComboBox, QSpinBox, QDoubleSpinBox {
+	background:QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #606060, stop: 1 #444444);
+	color: #eeeeee;
+	border: 1px solid #222222;
+}
+QLineEdit:hover, QComboBox:hover, QSpinBox:hover, QDoubleSpinBox:hover {
+	background:QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #707070, stop: 1 #545454);
+	border: 1px solid #3399FF;
+}
+QLineEdit:focus {
+	background:QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #545454, stop: 1 #707070);
+	selection-background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDFF, stop: 1 #AABBFF);
+	selection-color: white;
+}
+
+QTextEdit {
+	background: #666666;
+	border: 1px solid #444444;
+	color: #f0f0f0;
+}
+
+/* CHECK BOX */
+
+QCheckBox {
+	background: transparent;
+}
+QCheckBox:checked {
+	color: white;
+}
+QCheckBox::indicator {
+	width: 13px;
+	height: 13px;
+	top: 1px;
+}
+QCheckBox::indicator:checked {
+	image: url(:/qdxss/qdxres/checked.png);
+}
+QCheckBox::indicator:unchecked {
+	image: url(:/qdxss/qdxres/unchecked.png);
+}
+
+/* COMBO BOX */
+
+QComboBox::drop-down {
+	border-left: 1px solid #333333;
+}
+QComboBox::down-arrow {
+	image: url(:/qdxss/qdxres/arrow_down.png);
+}
+QComboBox QAbstractItemView {
+	border: none;
+	background: #222222;
+	color: #FFFFFF;
+	/*selection-background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDFF, stop: 1 #AABBFF);*/
+	selection-background-color: #3399FF;
+	selection-color: black;
+}
+
+/* SPIN BOX */
+
+QSpinBox::up-button, QDoubleSpinBox::up-button {
+	border-left: 1px solid #404040;
+	width: 12px;
+	padding-top: 1px;
+	image: url(:/qdxss/qdxres/arrow_spin_up.png);
+}
+QSpinBox::down-button, QDoubleSpinBox::down-button {
+	border-top: 1px solid #444444;
+	border-left: 1px solid #333333;
+	width: 12px;
+	image: url(:/qdxss/qdxres/arrow_spin_down.png);
+}
+
+/* SCROLL BAR */
+
+QScrollBar {
+	background: #999999;
+	margin: 0px;
+}
+QScrollBar:horizontal {
+	height: 12px;
+}
+QScrollBar:vertical {
+	width: 12px;
+}
+
+QScrollBar::handle {
+	margin: 2px;
+}
+QScrollBar::handle {
+	background: #707070;
+}
+QScrollBar::handle:horizontal:hover {
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #707070, stop: 1 #545454);
+	min-width: 10px;
+}
+QScrollBar::handle:vertical:hover {
+	background: QLinearGradient(x1:0, y1:0, x2:1, y2:0, stop: 0 #707070, stop: 1 #545454);
+	min-height: 10px;
+}
+QScrollBar::handle:disabled {
+	background: #777777;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+	width: 0px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	height: 0px;
+}
+QScrollBar::add-page, QScrollBar::sub-page {
+	background: none;
+}
+
+/* GROUP BOX */
+
+QGroupBox {
+	font: 10pt &quot;Segoe&quot;;
+	font-weight: bold;
+	margin: 0px;
+	/*border-top: 2px groove #444444;*/
+	border: 0px;
+	border-top: 4px solid #666666;
+/*	border-color: #666666 #AAAAAA #AAAAAA #666666;*/
+	padding-top: 18px;
+	background: #909090;
+}
+
+QGroupBox::title {
+	subcontrol-origin: padding;
+	subcontrol-position: top left;
+	padding: 1px 32px 2px 0px;
+}
+
+/* MENU &amp; MENUBAR */
+
+QMenuBar {
+	background: #222222;
+	color: #eeeeee;
+}
+QMenuBar::item {
+	background: transparent;
+}
+QMenuBar::item:selected {
+	background: #3399FF;
+}
+
+QMenu {
+	background: #222222;
+	color: #FFFFFF;
+}
+QMenu::item {
+	background: transparent;
+}
+QMenu::item:selected {
+	background: #3399FF;
+}
+
+/* TOOLBAR &amp; TOOLBUTTON */
+
+QToolBar {
+	border: 1px solid;
+	border-color: #AAAAAA #666666 #666666 #AAAAAA;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #8F8F8F, stop: 1 #808080);
+}
+
+QToolButton {
+	background: transparent;
+}
+
+QToolButton:hover {
+	background: #999999;
+	border: 0px;
+}
+
+QToolButton:on {
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #CCCCEE, stop: 1 #99AAEE);
+}
+
+/*  TOOLBOX */
+
+QToolBox::tab {
+	border: 1px solid;
+	border-color: #999999 #555555 #444444 #999999;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #666666, stop: 1 #555555);
+	color: #F0F0F0;
+	font: 11pt &quot;Segoe UI&quot;;
+}
+
+
+
+/* TABWIDGET */
+
+QTabWidget::pane {
+	border: 1px solid;
+	border-color: #AAAAAA #666666 #666666 #AAAAAA;
+}
+QTabBar::tab {
+	margin-top: 2px;
+	border-top: 1px solid #BBBBBB;
+	border-left: 1px solid #BBBBBB;
+	border-top-right-radius: 4px;
+	padding: 1px 6px 0px 4px;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #AAAAAA, stop: 1 #909090);
+}
+QTabBar::tab:selected {
+	margin-top: 1px;
+	border-top: 1px solid #EEEEEE;
+	border-left: 1px solid #EEEEEE;
+	border-bottom: none;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDDD, stop: 1 #AAAAAA);
+}
+
+/* QSPLITTER */
+
+QSplitter::handle:hover {
+	border: 1px solid;
+	border-color: #AAAAAA #666666 #666666 #AAAAAA;
+	background: red;
+}
+
+/******/
+
+QSlider:horizontal {
+	min-width: 32px;
+	height: 16px;
+}
+QSlider::handle:horizontal {
+	border: 1px solid #555555;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDDD, stop: 1 #BBBBBB);
+	width: 1px;
+	margin: 0 -4px;
+}
+QSlider::handle:hover {
+	background: white;
+}
+QSlider::sub-page:horizontal {
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #3DA3FF, stop: 1 #2A8FFF);
+	border: 1px solid #555555;
+}
+QSlider::add-page:horizontal {
+	background:QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #777777, stop: 1 #999999);
+	border: 1px solid #555555;
+}
+
+
+QSlider:vertical {
+	min-height: 32px;
+	width: 16px;
+}
+QSlider::handle:vertical {
+	border: 1px solid #555555;
+	background: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 #DDDDDD, stop: 1 #BBBBBB);
+	height: 1px;
+	margin: 0 -4px;
+}
+QSlider::add-page:vertical {
+	background: QLinearGradient(x1:0, y1:0, x2:1, y2:0, stop: 0 #3DA3FF, stop: 1 #2A8FFF);
+	border: 1px solid #555555;
+}
+QSlider::sub-page:vertical {
+	background:QLinearGradient(x1:0, y1:0, x2:1, y2:0, stop: 0 #777777, stop: 1 #999999);
+	border: 1px solid #555555;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_79">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QToolBox" name="toolBox">
+      <property name="minimumSize">
+       <size>
+        <width>280</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>280</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="pageTracing">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>268</width>
+         <height>1576</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Hair Tracing Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="margin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="title">
+           <string>Preprocessing:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_9">
+               <property name="text">
+                <string>Method:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboPrepMethod">
+               <item>
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Gaussian</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>DoG</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Bilateral</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QLabel" name="labelPrepSigma1">
+               <property name="text">
+                <string>Sigma H:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxPrepSigmaH">
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="labelPrepSigma2">
+               <property name="text">
+                <string>Sigma L:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxPrepSigmaL">
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>Orientation Calculation:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_6">
+               <property name="text">
+                <string># angle:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxNumKernels">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>96</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_19">
+               <property name="text">
+                <string># phase:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxNumPhases">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Kernel size:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxKernelWidth">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>65</number>
+               </property>
+               <property name="singleStep">
+                <number>2</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxKernelHeight">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>65</number>
+               </property>
+               <property name="singleStep">
+                <number>2</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_8">
+               <property name="text">
+                <string>Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGaborSigmaX">
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGaborSigmaY">
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QLabel" name="label_10">
+               <property name="text">
+                <string>Lambda:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGaborLambda">
+               <property name="minimum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>16.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_40">
+             <item>
+              <widget class="QLabel" name="label_51">
+               <property name="text">
+                <string># auto refine:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxNumAutoRefineOrient"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <item>
+              <widget class="QPushButton" name="buttonCalcOrientation">
+               <property name="text">
+                <string>Calc. orientation</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonRecalcOrientFromConfid">
+               <property name="text">
+                <string>Refine</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="title">
+           <string>Confidence map:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_30">
+             <item>
+              <widget class="QLabel" name="label_36">
+               <property name="text">
+                <string>Method:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboConfidMethod">
+               <item>
+                <property name="text">
+                 <string>My variance</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Max response</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_31">
+             <item>
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>Clamp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxClampConfidLow">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxClampConfidHigh">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.020000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buttonUpdateConfidence">
+             <property name="text">
+              <string>Update confidence</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="title">
+           <string>Feature Detection:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14">
+             <item>
+              <widget class="QLabel" name="label_22">
+               <property name="text">
+                <string>Nbr offset:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxNbrOffset">
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_15">
+             <item>
+              <widget class="QLabel" name="label_23">
+               <property name="text">
+                <string>Ridge diff:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxRidgeDiff">
+               <property name="maximum">
+                <double>16.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_18">
+             <item>
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>Conf. rng:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTraceLowVar">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTraceHighVar">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buttonDetectFeatures">
+             <property name="text">
+              <string>Detect line features</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="title">
+           <string>Strand Tracing:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_12">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_27">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Step len:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxStepLen">
+               <property name="minimum">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.250000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Max bend (deg):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxMaxBend">
+               <property name="maximum">
+                <double>90.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19">
+             <item>
+              <widget class="QLabel" name="label_27">
+               <property name="text">
+                <string>Health point:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxLaTermSteps"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_41">
+             <item>
+              <widget class="QCheckBox" name="checkBoxTraceRandomOrder">
+               <property name="text">
+                <string>Rand order</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxCorrectToRidge">
+               <property name="text">
+                <string>Correct to ridge</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_42">
+             <item>
+              <widget class="QLabel" name="label_24">
+               <property name="text">
+                <string>Ridge R:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxRidgeRadius">
+               <property name="maximum">
+                <double>2.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_53">
+               <property name="text">
+                <string>Max:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxMaxCorrection">
+               <property name="maximum">
+                <double>2.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_26">
+             <property name="spacing">
+              <number>2</number>
+             </property>
+             <item>
+              <widget class="QCheckBox" name="checkBoxTraceLengthClamp">
+               <property name="text">
+                <string>Length clamp</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxMinLen">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxMaxLen">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_52">
+             <property name="text">
+              <string>Coverage update:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="label_54">
+               <property name="text">
+                <string>Center:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxTraceCenterCov">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+               <property name="value">
+                <number>64</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_55">
+               <property name="text">
+                <string>Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTraceCovSigma">
+               <property name="maximum">
+                <double>3.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_34">
+             <item>
+              <widget class="QPushButton" name="buttonTraceByFeatures">
+               <property name="text">
+                <string>Trace sparse</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonClearStrands">
+               <property name="text">
+                <string>Clear sparse</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="title">
+           <string>Orientation Smoothing:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_65">
+             <item>
+              <widget class="QLabel" name="label_82">
+               <property name="text">
+                <string>Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxSigmaSpatial">
+               <property name="maximum">
+                <double>16.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_33">
+             <item>
+              <widget class="QLabel" name="label_39">
+               <property name="text">
+                <string>Confid bar:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxConfidThreshold">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_40">
+               <property name="text">
+                <string># iter:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDiffuseIterations">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buttonSmoothTensor">
+             <property name="text">
+              <string>Smooth orientation tensor</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>205</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_12">
+          <property name="title">
+           <string>Dense Strands:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_15">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_21">
+               <property name="text">
+                <string>Cvrg rng:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxMinAuxCoverage">
+               <property name="maximum">
+                <number>254</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxMaxAuxCoverage">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_64">
+             <item>
+              <widget class="QPushButton" name="buttonTraceAuxStrands">
+               <property name="text">
+                <string>Trace dense</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonClearAuxStrands">
+               <property name="text">
+                <string>Clear dense</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_16">
+          <property name="title">
+           <string>Silhouette Depth Falloff:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_21">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_66">
+             <item>
+              <widget class="QLabel" name="label_83">
+               <property name="text">
+                <string>R:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFalloffRadius"/>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_84">
+               <property name="text">
+                <string>Max depth:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFalloffDepth"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buttonAddSilhouetteFalloff">
+             <property name="text">
+              <string>Add silhouette falloff</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="title">
+           <string>Extra hair synthesis:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_10">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_54">
+             <item>
+              <widget class="QLabel" name="label_68">
+               <property name="text">
+                <string>Lyr #</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_25">
+               <property name="text">
+                <string>front:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsNumFrontLayers">
+               <property name="maximum">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_81">
+               <property name="text">
+                <string>back:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsNumBackLayers"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17">
+             <item>
+              <widget class="QLabel" name="label_69">
+               <property name="text">
+                <string>Thickness</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsLayerThickness">
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_52">
+             <item>
+              <widget class="QLabel" name="label_64">
+               <property name="text">
+                <string>Depthmap Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsDepthMapSigma">
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_67">
+             <item>
+              <widget class="QLabel" name="label_85">
+               <property name="text">
+                <string>Depth var.</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsDepthVar">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_51">
+             <item>
+              <widget class="QLabel" name="label_63">
+               <property name="text">
+                <string>Step len:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsStepLen">
+               <property name="maximum">
+                <double>4.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_65">
+               <property name="text">
+                <string>HP:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsHealth"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_53">
+             <item>
+              <widget class="QLabel" name="label_66">
+               <property name="text">
+                <string>Cvr centr</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsCenterCoverage">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_67">
+               <property name="text">
+                <string>sigma</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsCoverageSigma">
+               <property name="maximum">
+                <double>16.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_55">
+             <item>
+              <widget class="QLabel" name="label_70">
+               <property name="text">
+                <string>Cvr range</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsMinCoverage">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_71">
+               <property name="text">
+                <string>-</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxDsMaxCoverage">
+               <property name="maximum">
+                <number>255</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_72">
+             <item>
+              <widget class="QCheckBox" name="checkBoxDsLenClamp">
+               <property name="text">
+                <string>Length clamp</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsMinLen">
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_73">
+             <item>
+              <widget class="QLabel" name="label_91">
+               <property name="text">
+                <string>Depth mask shrink delta:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDsShrinkDelta">
+               <property name="value">
+                <double>3.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_63">
+             <item>
+              <widget class="QPushButton" name="buttonGenDenseStrands">
+               <property name="text">
+                <string>Trace extra</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonClearDenseStrands">
+               <property name="text">
+                <string>Clear extra</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_19">
+          <property name="title">
+           <string>Extra hair extra params:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_25">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="label_95">
+             <property name="text">
+              <string>Back half:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_75">
+             <item>
+              <widget class="QLabel" name="label_96">
+               <property name="text">
+                <string>Scale:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxEsBackHalfScale">
+               <property name="maximum">
+                <double>4.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_97">
+               <property name="text">
+                <string>Offset:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxEsBackHalfOffset"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_76">
+             <item>
+              <widget class="QLabel" name="label_98">
+               <property name="text">
+                <string># middle layers:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxEsNumMidLayers">
+               <property name="value">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageScene">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>268</width>
+         <height>1241</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Rendering Settings</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <property name="margin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="title">
+           <string>Camera:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_17">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <widget class="QLabel" name="label_17">
+               <property name="text">
+                <string>Background color:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonBgColor">
+               <property name="text">
+                <string>Change...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_39">
+             <item>
+              <widget class="QLabel" name="label_50">
+               <property name="text">
+                <string>Field of view (deg):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxCamFoV"/>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_38">
+             <item>
+              <widget class="QLabel" name="label_48">
+               <property name="text">
+                <string>Zn:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxCamZn">
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.200000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_49">
+               <property name="text">
+                <string>Zf:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxCamZf">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>9999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>100.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_20">
+          <property name="title">
+           <string>Ambient occlusion:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_26">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_77">
+             <item>
+              <widget class="QLabel" name="label_99">
+               <property name="text">
+                <string>Body:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxBodyAO">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_100">
+               <property name="text">
+                <string>Hair:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxHairAO">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>Global strand shading:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_14">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24">
+             <property name="spacing">
+              <number>1</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_31">
+               <property name="text">
+                <string>MSAA:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxMsaaSamples">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>8</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxMsaaQuality">
+               <property name="maximum">
+                <number>32</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonMsaaApply">
+               <property name="text">
+                <string>Apply</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_23">
+             <item>
+              <widget class="QLabel" name="label_30">
+               <property name="text">
+                <string>Global color:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonHairColor">
+               <property name="text">
+                <string>Change...</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_74">
+             <item>
+              <widget class="QLabel" name="label_92">
+               <property name="text">
+                <string>kA:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxKa">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>99.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_93">
+               <property name="text">
+                <string>kD:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxKd">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>99.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_94">
+               <property name="text">
+                <string>kR:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxKr">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>99.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_28">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>Tangential noise:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTanTexWeight">
+               <property name="maximum">
+                <double>2.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_29">
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_34">
+               <property name="text">
+                <string>Scale X:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTanTexScaleX">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <double>32.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_11">
+               <property name="text">
+                <string>Y:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxTanTexScaleY">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.001000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_46">
+             <item>
+              <widget class="QLabel" name="label_35">
+               <property name="text">
+                <string>Normal gradient:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxNormalGradWeight">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_49">
+             <item>
+              <widget class="QLabel" name="label_32">
+               <property name="text">
+                <string>Per-strand rand:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxStrandRandWeight">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_50">
+             <item>
+              <widget class="QLabel" name="label_61">
+               <property name="text">
+                <string>Force opaque:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxForceOpaque">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_68">
+             <item>
+              <widget class="QLabel" name="label_86">
+               <property name="text">
+                <string>Neck blend:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxNeckBlend">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.010000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>Sparse strands:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25">
+             <item>
+              <widget class="QLabel" name="label_33">
+               <property name="text">
+                <string>Width:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxHairWidth">
+               <property name="maximum">
+                <double>64.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_28">
+             <property name="text">
+              <string>Depth control:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_36">
+             <item>
+              <widget class="QLabel" name="label_43">
+               <property name="text">
+                <string>Scale:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxStrandsDepthScale">
+               <property name="decimals">
+                <number>0</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_42">
+               <property name="text">
+                <string>Offset:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxStrandsDepthOffset">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>-1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_20">
+             <item>
+              <widget class="QPushButton" name="buttonFilterStrandsColor">
+               <property name="text">
+                <string>Sample color</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_46">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterStrandsColorSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_35">
+             <item>
+              <widget class="QPushButton" name="buttonFilterStrandsDepth">
+               <property name="text">
+                <string>Filter depth</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_47">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterStrandsDepthSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_47">
+             <item>
+              <widget class="QPushButton" name="buttonFilterStrandsShape">
+               <property name="text">
+                <string>Filter shape</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_59">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterStrandsShapeSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_13">
+          <property name="title">
+           <string>Dense strands:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_16">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_43">
+             <item>
+              <widget class="QLabel" name="label_56">
+               <property name="text">
+                <string>Width:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAuxHairWidth">
+               <property name="maximum">
+                <double>64.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_41">
+             <property name="text">
+              <string>Depth control:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_37">
+             <item>
+              <widget class="QLabel" name="label_44">
+               <property name="text">
+                <string>Scale:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAuxStrandsDepthScale">
+               <property name="minimum">
+                <double>-9.949999999999999</double>
+               </property>
+               <property name="maximum">
+                <double>9.949999999999999</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_45">
+               <property name="text">
+                <string>Offset:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAuxStrandsDepthOffset">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>-0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_44">
+             <item>
+              <widget class="QPushButton" name="buttonFilterAuxStrandsColor">
+               <property name="text">
+                <string>Sample color</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_57">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterAuxStrandsColorSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_45">
+             <item>
+              <widget class="QPushButton" name="buttonFilterAuxStrandsDepth">
+               <property name="text">
+                <string>Filter depth</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_58">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterAuxStrandsDepthSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_48">
+             <item>
+              <widget class="QPushButton" name="buttonFilterAuxStrandsShape">
+               <property name="text">
+                <string>Filter shape</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_60">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterAuxStrandsShapeSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_14">
+          <property name="title">
+           <string>Extra strands:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_18">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_56">
+             <item>
+              <widget class="QLabel" name="label_72">
+               <property name="text">
+                <string>Width:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxDenseHairWidth">
+               <property name="maximum">
+                <double>64.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.200000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_73">
+             <property name="text">
+              <string>Depth control:</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_57">
+             <item>
+              <widget class="QLabel" name="label_74">
+               <property name="text">
+                <string>Scale:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAuxStrandsDepthScale_2">
+               <property name="minimum">
+                <double>-9.949999999999999</double>
+               </property>
+               <property name="maximum">
+                <double>9.949999999999999</double>
+               </property>
+               <property name="singleStep">
+                <double>0.050000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_75">
+               <property name="text">
+                <string>Offset:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAuxStrandsDepthOffset_2">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="value">
+                <double>-0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_58">
+             <item>
+              <widget class="QPushButton" name="buttonFilterDenseStrandsColor">
+               <property name="text">
+                <string>Sample color</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_76">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterDenseStrandsColorSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_59">
+             <item>
+              <widget class="QPushButton" name="buttonFilterDenseStrandsDepth">
+               <property name="text">
+                <string>Filter depth</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_77">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterDenseStrandsDepthSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_60">
+             <item>
+              <widget class="QPushButton" name="buttonFilterAuxStrandsShape_2">
+               <property name="text">
+                <string>Filter shape</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_78">
+               <property name="text">
+                <string>sigma:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxFilterAuxStrandsShapeSigma_2">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="singleStep">
+                <double>0.500000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="title">
+           <string>Image Layers:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_13">
+           <property name="spacing">
+            <number>3</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_61">
+             <item>
+              <widget class="QCheckBox" name="checkBoxBgLayer">
+               <property name="text">
+                <string>Background</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_79">
+               <property name="text">
+                <string>Z:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxBgLayerDepth">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_62">
+             <item>
+              <widget class="QCheckBox" name="checkBoxBodyLayer">
+               <property name="text">
+                <string>Body</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_80">
+               <property name="text">
+                <string>Z:</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxBodyLayerDepth">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="minimum">
+                <double>-999.000000000000000</double>
+               </property>
+               <property name="maximum">
+                <double>999.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxLargeBgLayer">
+             <property name="text">
+              <string>Expanded background</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxOrigLayer">
+             <property name="text">
+              <string>Original target image</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_78">
+             <item>
+              <widget class="QLabel" name="label_101">
+               <property name="text">
+                <string>Alternative Z:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxAltZ"/>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageMorph">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>280</width>
+         <height>506</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Hair Morphing</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_28">
+        <item>
+         <widget class="QGroupBox" name="groupBoxNWayMorph">
+          <property name="title">
+           <string>Morphing Control</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_29">
+           <item>
+            <layout class="QGridLayout" name="gridLayout_2">
+             <item row="1" column="1">
+              <widget class="QPushButton" name="buttonMultiScaleEMD">
+               <property name="text">
+                <string>Calc. flows</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="buttonBuildPyrFixK">
+               <property name="text">
+                <string>Build hierarchies</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QPushButton" name="buttonLoadMorphInput">
+               <property name="text">
+                <string>Load sources...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="buttonClearMorphInput">
+               <property name="text">
+                <string>Clear all</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QPushButton" name="buttonGenMorphStrands">
+               <property name="text">
+                <string>Generate hair</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QCheckBox" name="checkBoxShowMorphSrc">
+               <property name="text">
+                <string>show sources</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_81">
+             <item>
+              <widget class="QCheckBox" name="checkBoxLockTransform">
+               <property name="text">
+                <string>lock transform</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="checkBoxLockHeadModel">
+               <property name="text">
+                <string>lock head model</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_22">
+          <property name="title">
+           <string>Hair Hierarchy</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="3" column="2">
+            <widget class="QLabel" name="label_109">
+             <property name="text">
+              <string>L1:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_112">
+             <property name="text">
+              <string>L0:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QSpinBox" name="spinBoxLvl1ClusterRatio">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>9999</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QSpinBox" name="spinBoxLvl0ClusterRatio">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>20000</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QLabel" name="label_110">
+             <property name="text">
+              <string>L2:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="5">
+            <widget class="QSpinBox" name="spinBoxLvl2ClusterRatio">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>999</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="6">
+            <widget class="QLabel" name="label_108">
+             <property name="text">
+              <string>Ratio of strand # for fixed K:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QLabel" name="label_103">
+             <property name="text">
+              <string># levels:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" colspan="2">
+            <widget class="QSpinBox" name="spinBoxNumPyrLevels">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QCheckBox" name="checkBoxLvl0Relative">
+             <property name="text">
+              <string>relative</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2" colspan="2">
+            <widget class="QCheckBox" name="checkBoxLvl1Relative">
+             <property name="text">
+              <string>relative</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4" colspan="2">
+            <widget class="QCheckBox" name="checkBoxLvl2Relative">
+             <property name="text">
+              <string>relative</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>290</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageEdit">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>280</width>
+         <height>506</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Hair Editing</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_22">
+        <property name="margin">
+         <number>5</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="groupBox_21">
+          <property name="title">
+           <string>Stroke settings:</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="2">
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QDoubleSpinBox" name="spinBoxStrokeIntensity">
+             <property name="singleStep">
+              <double>0.200000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QSpinBox" name="spinBoxStrokeRadius">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QSpinBox" name="spinBoxStrokeLevel">
+             <property name="maximum">
+              <number>3</number>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QSpinBox" name="spinBoxStrokeFuzziness"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QRadioButton" name="radioButton">
+             <property name="text">
+              <string>Comb</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QRadioButton" name="radioButton_3">
+             <property name="text">
+              <string>Cut</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QLabel" name="label_102">
+             <property name="text">
+              <string>Radius:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0" colspan="2">
+            <widget class="QLabel" name="label_104">
+             <property name="text">
+              <string>Intensity:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QLabel" name="label_106">
+             <property name="text">
+              <string>Fuzziness:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QLabel" name="label_111">
+             <property name="text">
+              <string>Effective level:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_17">
+          <property name="title">
+           <string>Geometric Noise:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_23">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_69">
+             <item>
+              <widget class="QLabel" name="label_87">
+               <property name="text">
+                <string>Amp:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGeoNoiseAmp">
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_88">
+               <property name="text">
+                <string>Freq:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGeoNoiseFreq">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.005000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="buttonAddGeoNoise">
+             <property name="text">
+              <string>Add Geometric Noise</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_18">
+          <property name="title">
+           <string>Smoothing:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_24">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_70">
+             <item>
+              <widget class="QLabel" name="label_89">
+               <property name="text">
+                <string>Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxGeoSmoothSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <double>5.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonGeoSmooth">
+               <property name="text">
+                <string>Smooth Geometry</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_71">
+             <item>
+              <widget class="QLabel" name="label_90">
+               <property name="text">
+                <string>Sigma:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="spinBoxColorSmoothSigma">
+               <property name="decimals">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <double>5.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="buttonColorSmooth">
+               <property name="text">
+                <string>Smooth Color</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_23">
+          <property name="title">
+           <string>Debug</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="3" column="1">
+            <widget class="QPushButton" name="buttonBuildPyrAdaptive">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>Adaptive cluster</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="buttonSingleScaleEMD">
+             <property name="text">
+              <string>Plain EMD</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" colspan="2">
+            <widget class="QCheckBox" name="checkBoxUseStrandWeights">
+             <property name="text">
+              <string>use per-strand weights</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QPushButton" name="buttonShowColorRoots">
+             <property name="text">
+              <string>Show colorized roots</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>394</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageOld">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>280</width>
+         <height>506</height>
+        </rect>
+       </property>
+       <attribute name="label">
+        <string>Out-of-date</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_19">
+        <item>
+         <widget class="QGroupBox" name="groupBox_15">
+          <property name="title">
+           <string>Orientation Calculation:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_20">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>Method:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboOrientMethod">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Canny</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Gabor</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_12">
+             <item>
+              <widget class="QLabel" name="label_20">
+               <property name="text">
+                <string>Phase (deg):</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBoxPhase">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="maximum">
+                <number>360</number>
+               </property>
+               <property name="singleStep">
+                <number>5</number>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkBoxSaveKernels">
+             <property name="text">
+              <string>Save kernels to image</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Seed density:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxDensity">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="decimals">
+             <number>3</number>
+            </property>
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.005000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_12">
+            <property name="text">
+             <string># Relax:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="spinBoxNumRelaxations">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Relax force:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxRelaxForce">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.050000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonTraceStrands">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Trace dense orient</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_32">
+          <item>
+           <widget class="QLabel" name="label_38">
+            <property name="text">
+             <string>Method:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboSmoothMethod">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Multilateral</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ConfidDiffuse</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Blur</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <property name="verticalSpacing">
+           <number>3</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_13">
+            <property name="text">
+             <string>Weight:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="label_14">
+            <property name="text">
+             <string>Sigma:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBoxSmoothSpatial">
+            <property name="text">
+             <string>Spatial</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QCheckBox" name="checkBoxSmoothOrient">
+            <property name="text">
+             <string>Orient (deg)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxSigmaOrient">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>90.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QCheckBox" name="checkBoxSmoothColor">
+            <property name="text">
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxSigmaColor">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>128.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>1.000000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QCheckBox" name="checkBoxSmoothConfidence">
+            <property name="text">
+             <string>Confid</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxSigmaConfidence">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>128.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.500000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QCheckBox" name="checkBoxClampVar">
+            <property name="text">
+             <string>Clamp var.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxClampVar">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.050000000000000</double>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="checkBoxClampMaxResp">
+            <property name="text">
+             <string>Clamp max res</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QDoubleSpinBox" name="spinBoxClampMaxResp">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximum">
+             <double>1.000000000000000</double>
+            </property>
+            <property name="singleStep">
+             <double>0.050000000000000</double>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonCalcFrontDepth">
+          <property name="text">
+           <string>Calculate front depth map</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="buttonCalcBackDepth">
+          <property name="text">
+           <string>Calculate back depth map</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>87</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_27">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="tabMorph">
+         <attribute name="title">
+          <string>Morphing</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_80">
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMorphSrcHair">
+              <property name="text">
+               <string>source hair</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMorphDstHair">
+              <property name="text">
+               <string>target hair</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMorphHair">
+              <property name="text">
+               <string>morph hair</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMorphHead">
+              <property name="text">
+               <string>morph head</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_107">
+              <property name="text">
+               <string>Current level:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBoxCurrHairLevel"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_105">
+              <property name="text">
+               <string>Strand width:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="spinBoxMorphStrandWidth">
+              <property name="maximum">
+               <double>10.000000000000000</double>
+              </property>
+              <property name="singleStep">
+               <double>0.050000000000000</double>
+              </property>
+              <property name="value">
+               <double>1.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tabImage">
+         <attribute name="title">
+          <string>Image View</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>Hair Image:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboImageView">
+              <item>
+               <property name="text">
+                <string>Color</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Orientation</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Confidence</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Coverage</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Depth</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug1</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Debug2</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxToggleOrigPrep">
+              <property name="text">
+               <string>Orig./Prep.</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxToggleOrientTensor">
+              <property name="text">
+               <string>Orient./Tensor</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMask">
+              <property name="text">
+               <string>Mask</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxShowMaxResp">
+              <property name="text">
+               <string>Features only</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Opacity:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="sliderImageOpacity">
+              <property name="maximumSize">
+               <size>
+                <width>200</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="value">
+               <number>100</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_22">
+              <item>
+               <widget class="QLabel" name="label_29">
+                <property name="text">
+                 <string>Strands:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboHairRenderMode">
+                <item>
+                 <property name="text">
+                  <string>Strand color</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Global color</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Tangent</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Lighting</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Marschner</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_62">
+              <property name="text">
+               <string>Head:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboHeadRenderMode">
+              <property name="currentIndex">
+               <number>2</number>
+              </property>
+              <item>
+               <property name="text">
+                <string>Simple</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Texcoord</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Textured</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DepthOnly</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxImage">
+              <property name="text">
+               <string>Image</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxStrokes">
+              <property name="text">
+               <string>Strokes</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxHair">
+              <property name="text">
+               <string>Sparse str.</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxAuxHair">
+              <property name="text">
+               <string>Dense str.</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxDenseHair">
+              <property name="text">
+               <string>Extra str.</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxHead">
+              <property name="text">
+               <string>Head</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxNeck">
+              <property name="text">
+               <string>Neck</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxFrame">
+              <property name="text">
+               <string>Frame</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Misc</string>
+         </attribute>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1117</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuSave_hair_geometry">
+     <property name="title">
+      <string>Save hair geometry</string>
+     </property>
+     <addaction name="actionSaveSparseHairGeo"/>
+     <addaction name="actionSaveDenseHairGeo"/>
+     <addaction name="actionSaveExtraHairGeo"/>
+    </widget>
+    <widget class="QMenu" name="menuSave_hair_geometry_and_color">
+     <property name="title">
+      <string>Save hair geometry and color</string>
+     </property>
+     <addaction name="actionSaveSparseHairGeoColor"/>
+     <addaction name="actionSaveDenseHairGeoColor"/>
+     <addaction name="actionSaveExtraHairGeoColor"/>
+    </widget>
+    <addaction name="actionLoadHairModel"/>
+    <addaction name="actionLoadHairlessModel"/>
+    <addaction name="separator"/>
+    <addaction name="menuSave_hair_geometry"/>
+    <addaction name="menuSave_hair_geometry_and_color"/>
+    <addaction name="actionAutoSave3DStrands"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadColorImage"/>
+    <addaction name="actionLoadMask"/>
+    <addaction name="actionLoadFaceMask"/>
+    <addaction name="actionLoadHeadMesh"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadOrientChai"/>
+    <addaction name="actionLoadOrientWang"/>
+    <addaction name="separator"/>
+    <addaction name="actionSaveCurrentImage"/>
+    <addaction name="actionRenderToFile"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadHairStrands"/>
+    <addaction name="actionSaveHairStrands"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoadAuxStrands"/>
+    <addaction name="actionSaveAuxStrands"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionLoadFlatHair"/>
+    <addaction name="actionLoadHeightHair"/>
+    <addaction name="actionLoadBackgroundLayer"/>
+    <addaction name="actionLoadBodyLayer"/>
+   </widget>
+   <widget class="QMenu" name="menuProcess">
+    <property name="title">
+     <string>Process</string>
+    </property>
+    <widget class="QMenu" name="menuAdvanced">
+     <property name="title">
+      <string>Advanced...</string>
+     </property>
+     <addaction name="actionRefineOrientation"/>
+     <addaction name="actionUpdateConfidence"/>
+     <addaction name="actionDetectFeatures"/>
+    </widget>
+    <addaction name="actionProcessImage"/>
+    <addaction name="separator"/>
+    <addaction name="actionFaceReconstruct"/>
+    <addaction name="actionGen2DStrands"/>
+    <addaction name="actionEstimateDepth"/>
+    <addaction name="actionGen3DStrands"/>
+    <addaction name="separator"/>
+    <addaction name="actionCalcOrientation"/>
+    <addaction name="actionTraceStrands"/>
+    <addaction name="actionCalcDenseOrientation"/>
+    <addaction name="actionTraceAuxStrands"/>
+    <addaction name="separator"/>
+    <addaction name="actionClearStrands"/>
+    <addaction name="actionClearAuxStrands"/>
+    <addaction name="separator"/>
+    <addaction name="menuAdvanced"/>
+   </widget>
+   <widget class="QMenu" name="menuRender">
+    <property name="title">
+     <string>Render</string>
+    </property>
+    <addaction name="actionComputeAO"/>
+    <addaction name="actionClearAO"/>
+   </widget>
+   <widget class="QMenu" name="menuSegmentation">
+    <property name="title">
+     <string>Segmentation</string>
+    </property>
+    <addaction name="actionHairStroke"/>
+    <addaction name="actionFaceStroke"/>
+    <addaction name="actionBackgroundStroke"/>
+    <addaction name="separator"/>
+    <addaction name="actionEnableMatting"/>
+   </widget>
+   <widget class="QMenu" name="menuDebug">
+    <property name="title">
+     <string>Debug</string>
+    </property>
+    <addaction name="actionTest"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuProcess"/>
+   <addaction name="menuRender"/>
+   <addaction name="menuSegmentation"/>
+   <addaction name="menuDebug"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionLoadColorImage"/>
+   <addaction name="actionLoadHairModel"/>
+   <addaction name="actionLoadHairlessModel"/>
+   <addaction name="separator"/>
+   <addaction name="actionSegmentation"/>
+   <addaction name="actionFaceReconstruct"/>
+   <addaction name="actionGen2DStrands"/>
+   <addaction name="actionEstimateDepth"/>
+   <addaction name="actionGen3DStrands"/>
+   <addaction name="separator"/>
+   <addaction name="actionAutoSave3DStrands"/>
+   <addaction name="separator"/>
+   <addaction name="actionLaunchDepthEst"/>
+   <addaction name="actionProcessImage"/>
+   <addaction name="separator"/>
+   <addaction name="actionCalcOrientation"/>
+   <addaction name="actionTraceStrands"/>
+   <addaction name="actionCalcDenseOrientation"/>
+   <addaction name="actionTraceAuxStrands"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_2">
+   <property name="windowTitle">
+    <string>toolBar_2</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionComputeAO"/>
+   <addaction name="actionClearAO"/>
+   <addaction name="actionBatchRenderVideo"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar_3">
+   <property name="windowTitle">
+    <string>toolBar_3</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionHairStroke"/>
+   <addaction name="actionFaceStroke"/>
+   <addaction name="actionBackgroundStroke"/>
+   <addaction name="separator"/>
+   <addaction name="actionEnableMatting"/>
+   <addaction name="separator"/>
+   <addaction name="actionTest"/>
+   <addaction name="actionLoadBackgroundLayer"/>
+   <addaction name="actionLoadBodyLayer"/>
+  </widget>
+  <action name="actionLoadHairStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_load_strands.png</normaloff>:/HairLayers/Resources/icon_load_strands.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load hair strands...</string>
+   </property>
+  </action>
+  <action name="actionSaveHairStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_save_strands.png</normaloff>:/HairLayers/Resources/icon_save_strands.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save hair strands...</string>
+   </property>
+  </action>
+  <action name="actionProcessImage">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_process.png</normaloff>:/HairLayers/Resources/icon_process.png</iconset>
+   </property>
+   <property name="text">
+    <string>Process image</string>
+   </property>
+  </action>
+  <action name="actionLoadAuxStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_load_aux.png</normaloff>:/HairLayers/Resources/icon_load_aux.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load auxiliary strands...</string>
+   </property>
+  </action>
+  <action name="actionSaveAuxStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_save_aux.png</normaloff>:/HairLayers/Resources/icon_save_aux.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save auxiliary strands...</string>
+   </property>
+  </action>
+  <action name="actionLoadColorImage">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_open_color.png</normaloff>:/HairLayers/Resources/icon_open_color.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load color image...</string>
+   </property>
+  </action>
+  <action name="actionLoadMask">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_open_mask.png</normaloff>:/HairLayers/Resources/icon_open_mask.png</iconset>
+   </property>
+   <property name="text">
+    <string>Load hair mask...</string>
+   </property>
+  </action>
+  <action name="actionSaveCurrentImage">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_save_current.png</normaloff>:/HairLayers/Resources/icon_save_current.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save current image...</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionLoadOrientChai">
+   <property name="text">
+    <string>Load orientation (C)...</string>
+   </property>
+  </action>
+  <action name="actionLoadOrientWang">
+   <property name="text">
+    <string>Load orientation (W)...</string>
+   </property>
+  </action>
+  <action name="actionCalcOrientation">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_sparse_orient.png</normaloff>:/HairLayers/Resources/icon_sparse_orient.png</iconset>
+   </property>
+   <property name="text">
+    <string>Calculate sparse orientation</string>
+   </property>
+  </action>
+  <action name="actionRefineOrientation">
+   <property name="text">
+    <string>Refine orientation</string>
+   </property>
+  </action>
+  <action name="actionUpdateConfidence">
+   <property name="text">
+    <string>Update confidence</string>
+   </property>
+  </action>
+  <action name="actionDetectFeatures">
+   <property name="text">
+    <string>Detect features</string>
+   </property>
+  </action>
+  <action name="actionTraceStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_trace_sparse.png</normaloff>:/HairLayers/Resources/icon_trace_sparse.png</iconset>
+   </property>
+   <property name="text">
+    <string>Trace sparse hair strands</string>
+   </property>
+  </action>
+  <action name="actionClearStrands">
+   <property name="text">
+    <string>Clear sparse strands</string>
+   </property>
+  </action>
+  <action name="actionClearAuxStrands">
+   <property name="text">
+    <string>Clear auxiliary strands</string>
+   </property>
+  </action>
+  <action name="actionCalcDenseOrientation">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_dense_orient.png</normaloff>:/HairLayers/Resources/icon_dense_orient.png</iconset>
+   </property>
+   <property name="text">
+    <string>Calculate dense orientation</string>
+   </property>
+  </action>
+  <action name="actionTraceAuxStrands">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_trace_dense.png</normaloff>:/HairLayers/Resources/icon_trace_dense.png</iconset>
+   </property>
+   <property name="text">
+    <string>Trace auxiliary hair strands</string>
+   </property>
+  </action>
+  <action name="actionLoadHeadMesh">
+   <property name="text">
+    <string>Load head mesh...</string>
+   </property>
+  </action>
+  <action name="actionLoadFaceMask">
+   <property name="text">
+    <string>Load face mask...</string>
+   </property>
+  </action>
+  <action name="actionLoadHairModel">
+   <property name="text">
+    <string>Load hair model...</string>
+   </property>
+  </action>
+  <action name="actionLoadHairlessModel">
+   <property name="text">
+    <string>Load hairless model...</string>
+   </property>
+  </action>
+  <action name="actionSaveSparseHairGeo">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_save_strands.png</normaloff>:/HairLayers/Resources/icon_save_strands.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save sparse hair geometry...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save sparse hair geometry...</string>
+   </property>
+  </action>
+  <action name="actionSaveDenseHairGeo">
+   <property name="icon">
+    <iconset resource="HairLayers.qrc">
+     <normaloff>:/HairLayers/Resources/icon_save_aux.png</normaloff>:/HairLayers/Resources/icon_save_aux.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save dense hair geometry...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save dense hair geometry...</string>
+   </property>
+  </action>
+  <action name="actionSaveExtraHairGeo">
+   <property name="text">
+    <string>Save extra hair geometry...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save extra hair geometry...</string>
+   </property>
+  </action>
+  <action name="actionSaveSparseHairGeoColor">
+   <property name="text">
+    <string>Save sparse hair geometry and color...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save sparse hair geometry &amp; color...</string>
+   </property>
+  </action>
+  <action name="actionSaveDenseHairGeoColor">
+   <property name="text">
+    <string>Save dense hair geometry and color...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save dense hair geometry and color...</string>
+   </property>
+  </action>
+  <action name="actionSaveExtraHairGeoColor">
+   <property name="text">
+    <string>Save extra hair geometry and color...</string>
+   </property>
+   <property name="toolTip">
+    <string>Save extra hair geometry and color...</string>
+   </property>
+  </action>
+  <action name="actionGen2DStrands">
+   <property name="text">
+    <string>Generate 2D strands</string>
+   </property>
+  </action>
+  <action name="actionGen3DStrands">
+   <property name="text">
+    <string>Generate 3D strands</string>
+   </property>
+  </action>
+  <action name="actionEstimateDepth">
+   <property name="text">
+    <string>Estimate Depth...</string>
+   </property>
+  </action>
+  <action name="actionAutoSave3DStrands">
+   <property name="text">
+    <string>Auto save 3D strands</string>
+   </property>
+  </action>
+  <action name="actionLaunchDepthEst">
+   <property name="text">
+    <string>Launch DepthEst</string>
+   </property>
+  </action>
+  <action name="actionRenderToFile">
+   <property name="text">
+    <string>Render to file...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionComputeAO">
+   <property name="text">
+    <string>Compute AO</string>
+   </property>
+  </action>
+  <action name="actionClearAO">
+   <property name="text">
+    <string>Clear AO</string>
+   </property>
+  </action>
+  <action name="actionBatchRenderVideo">
+   <property name="text">
+    <string>Batch render video...</string>
+   </property>
+  </action>
+  <action name="actionLoadFlatHair">
+   <property name="text">
+    <string>Load flat hair layer...</string>
+   </property>
+  </action>
+  <action name="actionLoadHeightHair">
+   <property name="text">
+    <string>Load height hair layer...</string>
+   </property>
+  </action>
+  <action name="actionFaceReconstruct">
+   <property name="text">
+    <string>Reconstruct Face</string>
+   </property>
+  </action>
+  <action name="actionHairStroke">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Hair stroke</string>
+   </property>
+  </action>
+  <action name="actionFaceStroke">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Face stroke</string>
+   </property>
+  </action>
+  <action name="actionBackgroundStroke">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Background stroke</string>
+   </property>
+  </action>
+  <action name="actionSegmentation">
+   <property name="text">
+    <string>Segmentation</string>
+   </property>
+  </action>
+  <action name="actionEnableMatting">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Enable matting</string>
+   </property>
+  </action>
+  <action name="actionTest">
+   <property name="text">
+    <string>Debug test</string>
+   </property>
+  </action>
+  <action name="actionLoadBackgroundLayer">
+   <property name="text">
+    <string>Load background layer...</string>
+   </property>
+  </action>
+  <action name="actionLoadBodyLayer">
+   <property name="text">
+    <string>Load body layer...</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="HairLayers.qrc"/>
+  <include location="QDXStyle.qrc"/>
+ </resources>
+ <connections/>
+</ui>

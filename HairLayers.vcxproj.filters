@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{f1ed6fcf-67b8-4231-ac7f-7e5395a4cc43}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{439b0b95-0941-4baf-b3d3-9233a08c0e3e}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="QDXUT">
+      <UniqueIdentifier>{a34146ae-2b80-4772-afdc-8df8e36fa621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderers">
+      <UniqueIdentifier>{4fa307f1-b3e4-4cf6-b5a9-058f7facd9b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{b203de0e-ba46-4a3f-b6f3-244022df4e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hair model">
+      <UniqueIdentifier>{46d5e965-7b97-47cb-b033-d6ee2323e030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Head model">
+      <UniqueIdentifier>{7cc8d010-8efe-4385-ae32-2b024f136cf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Image layers">
+      <UniqueIdentifier>{8a7b6a9b-c15e-4ec2-9e71-3fc9986be146}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{09ee7bb5-f8ef-400a-8cd8-41df9d9a5d97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hair generation">
+      <UniqueIdentifier>{3d95d788-c62f-4ea7-8770-d8101366b3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Morph">
+      <UniqueIdentifier>{f6d5faac-4c51-4808-8eb3-b0a26039a98a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DisplaceInterp">
+      <UniqueIdentifier>{e99c30af-aee0-4a69-969c-aab3d2bff2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hair clustering">
+      <UniqueIdentifier>{b3a06d65-a5d5-4181-b0fb-991038fb6588}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HairLayers.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HairLayers.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_HairLayers.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_ImageWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_ImageWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXCamera.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QDXCamera.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QDXCamera.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXCoordFrame.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXEmpty.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXFancyCoordFrame.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXImageSurface.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXLight.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXMesh.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXMeshObject.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXObject.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXObjectManipulator.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QDXObjectManipulator.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QDXObjectManipulator.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXRenderGroup.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXScene.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QDXScene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QDXScene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXUT.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXWidget.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QDXWidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QDXWidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_MyScene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_MyScene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="QDXUT\QDXImageSprite.cpp">
+      <Filter>QDXUT</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_HairUtil.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_HairUtil.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_QDXStyle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyLayerRenderer.cpp">
+      <Filter>Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="HairAORenderer.cpp">
+      <Filter>Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageLayerRenderer.cpp">
+      <Filter>Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageRenderer.cpp">
+      <Filter>Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="OrigLayerRenderer.cpp">
+      <Filter>Renderers</Filter>
+    </ClCompile>
+    <ClCompile Include="HairUtil.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="Marschner.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="LxConsole.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="HairRenderer.cpp">
+      <Filter>Hair model</Filter>
+    </ClCompile>
+    <ClCompile Include="HairStrandModel.cpp">
+      <Filter>Hair model</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadRenderer.cpp">
+      <Filter>Head model</Filter>
+    </ClCompile>
+    <ClCompile Include="BodyModel.cpp">
+      <Filter>Image layers</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageWidget.cpp">
+      <Filter>Image layers</Filter>
+    </ClCompile>
+    <ClCompile Include="StrokesSprite.cpp">
+      <Filter>Image layers</Filter>
+    </ClCompile>
+    <ClCompile Include="HairImage.cpp">
+      <Filter>Hair generation</Filter>
+    </ClCompile>
+    <ClCompile Include="HairLayers.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MyScene.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneWidget.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="MorphController.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+    <ClCompile Include="HairMorphRenderer.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadMorphMesh.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+    <ClCompile Include="HeadMorphRenderer.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+    <ClCompile Include="nnls.c">
+      <Filter>DisplaceInterp</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolator.cpp">
+      <Filter>DisplaceInterp</Filter>
+    </ClCompile>
+    <ClCompile Include="HairLayersTests.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="HairClusterer.cpp">
+      <Filter>Hair clustering</Filter>
+    </ClCompile>
+    <ClCompile Include="IsochartHeap.cpp">
+      <Filter>Hair clustering</Filter>
+    </ClCompile>
+    <ClCompile Include="CoordUtil.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="HairMorphHierarchy.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+    <ClCompile Include="HairHierarchy.cpp">
+      <Filter>Hair clustering</Filter>
+    </ClCompile>
+    <ClCompile Include="qtpolygon.cpp">
+      <Filter>Misc</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtpolygon.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtpolygon.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="HairFlows.cpp">
+      <Filter>Morph</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="HairLayers.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HairLayers.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QDXUT\QDXCamera.h">
+      <Filter>QDXUT</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QDXUT\QDXObjectManipulator.h">
+      <Filter>QDXUT</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QDXUT\QDXScene.h">
+      <Filter>QDXUT</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QDXUT\QDXWidget.h">
+      <Filter>QDXUT</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QDXStyle.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HairUtil.h">
+      <Filter>Misc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="ImageWidget.h">
+      <Filter>Image layers</Filter>
+    </CustomBuild>
+    <CustomBuild Include="HairLayers.h">
+      <Filter>Core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="MyScene.h">
+      <Filter>Core</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qtpolygon.h">
+      <Filter>Misc</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_HairLayers.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXCoordFrame.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXEmpty.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXFancyCoordFrame.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXImageSurface.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXLight.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXMesh.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXMeshObject.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXObject.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXRenderGroup.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXUT.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="QDXUT\QDXImageSprite.h">
+      <Filter>QDXUT</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyLayerRenderer.h">
+      <Filter>Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="HairAORenderer.h">
+      <Filter>Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageLayerRenderer.h">
+      <Filter>Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageRenderer.h">
+      <Filter>Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="OrigLayerRenderer.h">
+      <Filter>Renderers</Filter>
+    </ClInclude>
+    <ClInclude Include="LxConsole.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="Marschner.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="HairRenderer.h">
+      <Filter>Hair model</Filter>
+    </ClInclude>
+    <ClInclude Include="HairStrandModel.h">
+      <Filter>Hair model</Filter>
+    </ClInclude>
+    <ClInclude Include="HeadRenderer.h">
+      <Filter>Head model</Filter>
+    </ClInclude>
+    <ClInclude Include="BodyModel.h">
+      <Filter>Image layers</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneWidget.h">
+      <Filter>Image layers</Filter>
+    </ClInclude>
+    <ClInclude Include="StrokesSprite.h">
+      <Filter>Image layers</Filter>
+    </ClInclude>
+    <ClInclude Include="HairImage.h">
+      <Filter>Hair generation</Filter>
+    </ClInclude>
+    <ClInclude Include="HairImageCommon.h">
+      <Filter>Hair generation</Filter>
+    </ClInclude>
+    <ClInclude Include="MorphController.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="HairMorphRenderer.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="HeadMorphMesh.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="HeadMorphRenderer.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolator.h">
+      <Filter>DisplaceInterp</Filter>
+    </ClInclude>
+    <ClInclude Include="nnls.h">
+      <Filter>DisplaceInterp</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleInterpolator.h">
+      <Filter>DisplaceInterp</Filter>
+    </ClInclude>
+    <ClInclude Include="HairClusterer.h">
+      <Filter>Hair clustering</Filter>
+    </ClInclude>
+    <ClInclude Include="IsochartArray.h">
+      <Filter>Hair clustering</Filter>
+    </ClInclude>
+    <ClInclude Include="IsochartHeap.h">
+      <Filter>Hair clustering</Filter>
+    </ClInclude>
+    <ClInclude Include="CoordUtil.h">
+      <Filter>Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="HairMorphHierarchy.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="HairHierarchy.h">
+      <Filter>Hair clustering</Filter>
+    </ClInclude>
+    <ClInclude Include="MorphDef.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+    <ClInclude Include="HairFlows.h">
+      <Filter>Morph</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="QDXUT\QDXCommon.fxh">
+      <Filter>QDXUT</Filter>
+    </None>
+    <None Include="QDXUT\QDXCoordFrame.fx">
+      <Filter>QDXUT</Filter>
+    </None>
+    <None Include="QDXUT\QDXImageSurface.fx">
+      <Filter>QDXUT</Filter>
+    </None>
+    <None Include="QDXUT\QDXLight.fx">
+      <Filter>QDXUT</Filter>
+    </None>
+    <None Include="MyScene.fx" />
+  </ItemGroup>
+</Project>

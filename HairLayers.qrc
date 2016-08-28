@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/HairLayers">
+        <file>Resources/icon_process.png</file>
+        <file>Resources/icon_open_color.png</file>
+        <file>Resources/icon_open_mask.png</file>
+        <file>Resources/icon_save_current.png</file>
+        <file>Resources/icon_load_aux.png</file>
+        <file>Resources/icon_load_strands.png</file>
+        <file>Resources/icon_save_aux.png</file>
+        <file>Resources/icon_save_strands.png</file>
+        <file>Resources/icon_dense_orient.png</file>
+        <file>Resources/icon_sparse_orient.png</file>
+        <file>Resources/icon_trace_dense.png</file>
+        <file>Resources/icon_trace_sparse.png</file>
+    </qresource>
+</RCC>

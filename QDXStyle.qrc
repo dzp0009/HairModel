@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/qdxss">
+        <file>qdxres/arrow_down.png</file>
+        <file>qdxres/arrow_spin_down.png</file>
+        <file>qdxres/arrow_spin_up.png</file>
+        <file>qdxres/checked.png</file>
+        <file>qdxres/unchecked.png</file>
+    </qresource>
+</RCC>
